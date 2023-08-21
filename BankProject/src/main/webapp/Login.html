@@ -1,0 +1,77 @@
+/<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    .container {
+      margin-top: 50px;
+      width: 500px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" align="left">
+    <h2 align="center">Login</h2>
+    <form action="login" method="post" name="loginForm" onsubmit="return validateForm()">
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="phone" required>
+
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+
+      <label for="role"><b>Role</b></label>
+      <select name="role" required>
+        <option value="customer">Customer</option>
+        <option value="admin">Admin</option>
+      </select>
+
+      <button type="submit">Login</button>
+      <br><br>
+     <a href="ForgotPassword.html">Forgot Password?</a><br><br>
+	<p>For more information on our legal obligations, please see our <a href="Registration.html">Registration Here</a>.</p>
+  </div>
+  <script>
+    function validateForm() {
+      var x = document.forms["loginForm"]["phone"].value;
+      var y = document.forms["loginForm"]["password"].value;
+      if (x == "") {
+        alert("Username must be filled out");
+        return false;
+      }
+      if (y == "") {
+        alert("Password must be filled out");
+        return false;
+      }
+      if (z == "") {
+        alert("Role must be selected");
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>

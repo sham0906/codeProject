@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transaction Boxes Example</title>
+	<style>
+		.box {
+			width: 200px;
+			height: 150px;
+			background-color: #F0F0F0;
+			margin: 10px;
+			float: left;
+			text-align: center;
+			line-height: 150px;
+			font-size: 24px;
+			font-weight: bold;
+			color: #333333;
+			text-decoration: none;
+			cursor: pointer;
+			transition: background-color 0.2s ease-in-out;
+		}
+		.box:hover {
+			background-color: #CCCCCC;
+		}
+		.deposit { background-color: #00CC66; }
+		.withdrawal { background-color: #FF6600; }
+		.transfer { background-color: #3366CC; }
+		.check { background-color: #9933CC; }
+		.User { background-color: skyblue; }
+		.transaction { background-color: pink; }
+		.container {
+			width: 440px;
+			margin: 0 auto;
+		}
+		.container:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		.container div {
+			width: 200px;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<a href="Deposit.jsp" class="box deposit">Deposit</a>
+		<a href="withdrawal.jsp" class="box withdrawal">Withdrawal</a>
+	</div>
+	<div class="container">
+		<a href="moneytransfer.jsp" class="box transfer">Money Transfer</a>
+		<a href="#" class="box check">Check Balance</a>
+	</div>
+	<div class="container">
+		<a href="Adminuser.jsp" class="box User">user information</a>
+		<a href="#" class="box transaction">transaction</a>
+	</div>
+</body>
+</html>
